@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --blue: rgb(26, 57, 87);
+  --white: rgb(236, 236, 236);
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  font-weight: var(--font-weight);
+  transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
+}
+
+body.light {
+  --background-color: var(--white);
+  --text-color: var(--blue);
+  --font-weight: 400;
+  --image: url("../day.jpg");
+}
+
+body.dark {
+  --background-color: var(--blue);
+  --text-color: var(--white);
+  --font-weight: 500;
+  --image: url("../night.jpg");
+}
+
+nav {
+  padding: 1rem 25%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--text-color);
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+
+#image {
+  width: 100%;
+  height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 0.7s ease-in-out;
+  background-image: var(--image);
+}
+
+nav a:hover {
+  color: rgb(12, 216, 189);
+}
+
+h1 {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+p {
+  width: 40%;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
